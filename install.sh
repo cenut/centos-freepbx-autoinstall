@@ -85,7 +85,7 @@ echo -e '\tPear reqs installed.'
 ###
 echo 'Downloading Jansson and Asterisk'
 cd /usr/src 
-wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-15-current.tar.gz
+wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-16-current.tar.gz
 wget -O jansson.tar.gz https://github.com/akheron/jansson/archive/v2.10.tar.gz
 echo -e '\tDownload complete.'
 
@@ -104,8 +104,8 @@ echo -e '\tJansson install complete.'
 ###
 echo 'Compiling and Installing Asterisk, this will take a while'
 cd /usr/src
-tar xvfz asterisk-15-current.tar.gz
-rm -f asterisk-15-current.tar.gz
+tar xvfz asterisk-16-current.tar.gz
+rm -f asterisk-16-current.tar.gz
 cd asterisk-*
 contrib/scripts/install_prereq install
 ./configure --with-pjproject-bundled
@@ -136,9 +136,9 @@ echo -e '\tApache config updated.'
 ###
 echo 'Installing FreePBX'
 cd /usr/src
-wget http://mirror.freepbx.org/modules/packages/freepbx/freepbx-14.0-latest.tgz
-tar xfz freepbx-14.0-latest.tgz
-rm -f freepbx-14.0-latest.tgz
+wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-17-current.tar.gz
+tar xfz asterisk-17-current.tar.gz
+rm -f asterisk-17-current.tar.gz
 cd freepbx
 ./start_asterisk start
 ./install -n
